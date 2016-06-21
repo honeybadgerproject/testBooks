@@ -1,0 +1,28 @@
+<div class="container"  ng-init="initBooks()">
+    <!-- row -->
+    <div class="row">
+
+      <!--show results -->
+      <div class='col-sm-6'>
+
+        <ul class="list-group">
+          <li class="list-group-item" ng-repeat="booklist in books">
+            <p>{{booklist.name}}</p>
+            <p>{{booklist.author}}</p>
+            <p>{{booklist.category}}</p>
+            <p>{{booklist.date}}</p>
+            .........   <p>{{booklist.status}}</p>  ........
+            <button type="submit" class="btn btn-default" ng-click="changeStatus()">change status</button>
+          </li>
+        </ul>
+
+
+
+        <p>pagination:</p>
+        <ul class="pagination">
+          <li><a href="#" ng-repeat="page in pagination">{{$index + 1}}</a></li>
+
+        </ul>
+      </div>
+    </div>
+</div>
